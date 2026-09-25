@@ -654,6 +654,4 @@ B.E. — Artificial Intelligence & Data Science
 
 ---
 
-## License
 
-This repository was created as a technical assignment submission for Digitomics.
