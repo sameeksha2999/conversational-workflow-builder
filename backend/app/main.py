@@ -12,17 +12,20 @@ app = FastAPI(
 )
 
 
-# Allow the Vite development frontend.
-# Vite may use 5173, 5174, 5175, etc. if an earlier port is occupied.
+# Allow local development frontend and deployed Render frontend.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        # Local development
         "http://localhost:5173",
         "http://localhost:5174",
         "http://localhost:5175",
         "http://127.0.0.1:5173",
         "http://127.0.0.1:5174",
         "http://127.0.0.1:5175",
+
+        # Production frontend
+        "https://conversational-workflow-builder-1.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
